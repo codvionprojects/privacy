@@ -18,7 +18,7 @@
 .scene-8bar {
     position: absolute;
     inset: 0;
-    width: 100%;
+    width: 101%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -214,8 +214,7 @@ html[data-theme='dark'] .scene-8bar .bar-sec {
 }
 
 @media screen and (max-width: 768px) {
-    .scene {
-        height: 110dvh;
-        overflow: hidden;
+    .scene-8bar {
+        height: 110%;
     }
 }

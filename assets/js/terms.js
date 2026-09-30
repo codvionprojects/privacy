@@ -211,10 +211,15 @@ if (termsLayout && mobileTocToggle) {
                     "aria-expanded",
                     "false"
                 );
-                document.querySelector(".mobile-toc").classList.remove("is-open");
+
+                document.querySelector(".mobile-toc")?.classList.remove("is-open");
             }
         });
+    }, {
+        rootMargin: "-25% 0px -75% 0px",
+        threshold: 0
     });
 
     observer.observe(termsLayout);
 }
+

@@ -172,7 +172,7 @@ html[data-theme="dark"] .moon-icon {
 }
 
 @media screen and (max-width: 768px) {
-    .theme-stair {
-        height: 110dvh;
+    .theme-stair .stair-bar {
+        height: 110%;
     }
 }
