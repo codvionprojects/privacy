@@ -1,0 +1,106 @@
+.cta-build {
+    background: var(--bg-secondary);
+    text-align: center;
+    padding: 120px 60px;
+    overflow: hidden;
+    margin: 0px 0.2%;
+    border-radius: 5px;
+    position: relative;
+    z-index: 3;
+}
+
+.cta-build .cta-build-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(130px);
+    pointer-events: none
+}
+
+.cta-build .cta-build-blob:nth-child(1) {
+    width: 420px;
+    height: 420px;
+    background: var(--primary-800);
+    top: -200px;
+    left: -150px;
+}
+
+.cta-build .cta-build-blob:nth-child(2) {
+    width: 420px;
+    height: 420px;
+    background: var(--primary-400);
+    bottom: -200px;
+    right: -150px;
+}
+
+.cta-build .cta-build-big {
+    font-family: var(--unb);
+    font-size: clamp(50px, 10vw, 140px);
+    font-weight: 900;
+    line-height: .83;
+    position: relative;
+    z-index: 1
+}
+
+.cta-build .cta-build-big .cta-build-line {
+    overflow: hidden;
+    display: block
+}
+
+.cta-build .cta-build-big .cta-build-line .cta-build-w {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(150px);
+}
+
+.cta-build .cta-build-big .cta-build-lime {
+    color: var(--primary-500);
+}
+
+.cta-build .build-cta {
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+    margin-top: 48px;
+    position: relative;
+}
+
+.cta-build .build-cta .btn {
+    padding: 10px 35px;
+    box-shadow: var(--shadow-sm)
+}
+
+@media (max-width:786px) {
+    .cta-build {
+        padding: 50px 5px 80px 5px;
+    }
+
+    .cta-build .cta-build-big .cta-build-line .cta-build-w {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    .cta-build .build-cta {
+        margin-top: 15px;
+    }
+}
+
+
+@media (max-width:320px) {
+    .cta-build .cta-build-big {
+        font-size: clamp(40px, 10vw, 100px);
+    }
+
+    .cta-build .build-cta .btn {
+        padding: 8px 20px;
+    }
+
+    .cta-build .cta-build-blob:nth-child(1) {
+        width: 220px;
+        height: 220px;
+    }
+
+    .cta-build .cta-build-blob:nth-child(2) {
+        width: 220px;
+        height: 220px;
+    }
+}

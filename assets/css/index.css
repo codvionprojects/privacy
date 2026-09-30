@@ -1,0 +1,145 @@
+main {
+    max-width: 2000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 40px 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero .hero-bg .hero-bg-gradient {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 85% 85%,
+            rgba(0, 217, 255, 0.13),
+            transparent 55%),
+        radial-gradient(ellipse at 25% 75%,
+            rgba(13, 63, 143, 0.08),
+            transparent 50%);
+}
+
+.hero .h-title {
+    font-family: var(--unb);
+    font-size: min(11vw, 200px);
+    font-weight: 900;
+    line-height: .82;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .h-title .h-t-line {
+    overflow: hidden;
+    display: block;
+    color: var(--text-primary);
+}
+
+.hero .h-title .h-t-line .h-t-w {
+    display: inline-block;
+    transform: translateY(200px);
+}
+
+.hero .h-title .h-t-line .h-t-w.stroke {
+    -webkit-text-stroke: 2px var(--primary-600);
+    color: transparent;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0px;
+    position: relative;
+}
+
+.marquee::before,
+.marquee::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--primary-500), transparent);
+}
+
+.marquee::before {
+    top: 0;
+}
+
+.marquee::after {
+    bottom: 0;
+}
+
+.marquee-section {
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+    will-change: transform;
+}
+
+.marquee-content {
+    display: flex;
+    align-items: center;
+}
+
+.marquee-items {
+    color: var(--text-primary);
+    font-size: min(5vw, 1.2rem);
+    font-family: var(--pop);
+    margin-right: 40px;
+    white-space: nowrap;
+    transform: translateY(0px);
+    transition: transform var(--transition-fast);
+}
+
+.marquee-items i {
+    color: var(--primary-700);
+}
+
+.marquee-items:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 786px) {
+    main {
+        overflow: hidden;
+    }
+
+    .marquee {
+        padding: 10px 0px;
+    }
+
+    .marquee-items {
+        font-size: 0.90rem;
+        margin-right: 18px;
+    }
+
+    .marquee-section {
+        animation: marquee 15s linear infinite;
+    }
+}
