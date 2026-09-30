@@ -1,3 +1,17 @@
+gsap.utils.toArray(".term-box").forEach((box) => {
+    gsap.from(box, {
+        y: 80,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: box,
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+        }
+    });
+});
+
 const tocLinks = [
     ...document.querySelectorAll(".js-toc-link")
 ];
