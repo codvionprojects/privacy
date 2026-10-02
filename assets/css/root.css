@@ -222,6 +222,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none !important;
 }
 
 body {
@@ -244,7 +245,7 @@ input,
 textarea,
 select,
 option {
-  cursor: none !important;
+    cursor: none !important;
 }
 
 
