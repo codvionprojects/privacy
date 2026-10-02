@@ -153,6 +153,7 @@
     position: relative;
     height: auto;
     line-height: 1;
+    overflow: hidden;
 }
 
 .codvion-pro-footer-brandline h6 {
@@ -160,17 +161,21 @@
     padding: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
     flex-wrap: nowrap;
     color: transparent;
-    -webkit-text-stroke: 1px var(--primary-500);
+    -webkit-text-stroke: 2px var(--primary-500);
     font-size: min(15.5vw, 25rem);
     font-family: var(--cod);
     line-height: .83;
+    width: 100%;
 }
 
 .codvion-pro-footer-brandline h6 .ani-foot-text {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     text-align: center;
     transition: var(--spring);
@@ -180,6 +185,9 @@
     display: inline-block;
     transform: translateY(300px);
     opacity: 0;
+    -webkit-font-smoothing: antialiased;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
 }
 
 .codvion-pro-footer-bottom {

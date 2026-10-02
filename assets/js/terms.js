@@ -32,10 +32,6 @@ if (tocLinks.length) {
 
     let targetId = null;
 
-    const clearActive = () => {
-        tocLinks.forEach((link) => link.classList.remove("is-active"));
-    };
-
     const setActive = (id) => {
         tocLinks.forEach((link) => {
             link.classList.toggle(
@@ -147,7 +143,7 @@ if (tocLinks.length) {
             if (!section) return;
 
             targetId = id;
-            clearActive();
+            setActive(id);
             scrollToSection(section, () => finishNavigation(id));
 
             history.pushState(null, "", href);

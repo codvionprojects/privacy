@@ -20,9 +20,9 @@
     overflow: hidden;
     text-align: left;
     background: var(--bg-secondary);
-    border: 1px solid var(--border-secondary);
+    border: 1px solid var(--border-primary);
     border-radius: 20px;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
     transition:
         transform var(--transition-slow),
         box-shadow var(--transition-slow),
