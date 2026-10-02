@@ -650,13 +650,31 @@ header .container .menu-btn.active .bar-b {
 
 @media (max-width:1150px) {
     .header-btn-2 {
-        display: none;
+        display: none !important;
+    }
+
+    header .container .nav-links a {
+        font-size: clamp(0.85rem, 1.3vw, 1rem);
     }
 }
 
 @media (max-width:1000px) {
     header .container .nav-links a {
         font-size: clamp(0.60rem, 1.3vw, 0.75rem);
+    }
+}
+
+@media (max-width:900px) {
+    .header-btn-1 {
+        display: none !important;
+    }
+
+    header .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header .container .nav-links a {
+        font-size: clamp(0.90rem, 1.3vw, 1.2rem);
     }
 }
 
@@ -730,6 +748,10 @@ header .container .menu-btn.active .bar-b {
 
     .header-btn-2 {
         display: inline-flex;
+    }
+
+    .header-btn-1 {
+        display: inline-flex !important;
     }
 
     .btn {
