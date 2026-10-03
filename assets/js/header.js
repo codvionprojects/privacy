@@ -24,11 +24,9 @@ let header_scroll = window.scrollY;
 
 function headerScrollMore() {
     const scroll_header = window.scrollY;
-    if (scroll_header > header_scroll && scroll_header > 20) {
-        header.style.top = "-5rem";
+    if (scroll_header > header_scroll && scroll_header > 0) {
         header.classList.remove('top');
     } else {
-        header.style.top = "0rem";
         header.classList.add('top');
     }
     header_scroll = scroll_header;
@@ -174,5 +172,4 @@ window.addEventListener(
     },
     { passive: true }
 );
-
 handleHeaderScroll();
