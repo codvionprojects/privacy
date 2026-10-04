@@ -107,6 +107,7 @@
             #f97316 100%);
 
     --header-bg: rgb(255, 255, 255, 0.4);
+    --message-bg: rgb(255, 255, 255, 0.5);
     --bg-primary: #ffffff;
     --bg-secondary: #f8fafc;
     --bg-tertiary: #e5ecf3;
@@ -175,6 +176,7 @@
 
 [data-theme="dark"] {
     --header-bg: rgb(10, 10, 10, 0.4);
+    --message-bg: rgb(10, 10, 10, 0.5);
     --bg-primary: #0a0a0a;
     --bg-secondary: #0f172a;
     --bg-tertiary: #242c3a;
@@ -234,20 +236,16 @@ body {
     position: relative;
 }
 
-
 a,
 button,
-.ser-word,
-.service-card,
 img,
 span,
 input,
 textarea,
 select,
 option {
-    cursor: none !important;
+  cursor: none !important;
 }
-
 
 h1,
 h2,
