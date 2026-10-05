@@ -43,8 +43,11 @@ function changeTheme() {
 
     setTimeout(() => {
         themeStair.classList.remove('open');
-        themeChanging = false;
     }, 1950);
+
+    setTimeout(() => {
+        themeChanging = false;
+    }, 2100);
 }
 
 themeToggle.addEventListener('click', changeTheme);
